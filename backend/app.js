@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const app = express();
 
 const productRoutes = require("./routes/productRoutes");
+const deliveryRoutes = require('./routes/deliveryRoutes')
 const HttpError = require("./models/http-error");
 
 app.use(bodyParser.json());
@@ -20,6 +21,8 @@ app.use((req, res, next) => {
 
 
 app.use("/api/product", productRoutes);
+app.use("/api/delivery", deliveryRoutes);
+
 
 // app.use((req, res, next) => {
 //     const error = new HttpError("Given route not found", 404);

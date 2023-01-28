@@ -32,4 +32,22 @@ const addNew = (req, res, next) => {
     res.status(201).json({ createProduct });
 }
 
+const getProducts = (req, res, next) => {
+    // const getAll = async () => {
+    //     const all = await Product.find();
+    //     if (all) {
+    //         return all;
+    //     }
+    // }
+    // const all = getAll();
+
+    // console.log(all);
+
+    // res.json({ all })
+    Product.find().then(all => {
+        res.json(all)
+    })
+}
+
 exports.addNew = addNew
+exports.getProducts = getProducts
