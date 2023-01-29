@@ -1,3 +1,7 @@
+
+      
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,7 +16,7 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    
+    <link href="css/Trntable.css" rel="stylesheet">
    
    <style>
       html, body {
@@ -427,53 +431,33 @@
     <main style="margin-top: 15vh;">
       
       <h1 style="text-align: center;">  Inventory</h1>
-      <table class="table" style="margin:12px">
-        <thead>
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">Product Name</th>
-            <th scope="col">Category</th>
-            <th scope="col">Estimate delivery</th>
-            <th scope="col">Actual delivery</th>
-            <th scope="col">No of Paletts</th>
-            <th scope="col">Perishable</th>
-            <th scope="col">Expiry Date </th>
-
-          </tr>
+<div class="total">
+<div class="tbl-header">
+    <table> 
+        <thead> 
+            <tr> 
+                <th>Product Name</th> 
+                <th>Category</th> 
+                <th>Perishable</th> 
+            </tr> 
         </thead>
+</table>
+</div>
+<div class="tbl-content">
+    <table>
         <tbody>
-          <tr >
-            <td>1</td>
-            <td>asasa</td>
-            <td>@mdsaao</td>
-            <td>12-43-1212</td>
-            <td>@13-01-12121</td> 
-            <td>2</td>
-            <td>No</td>
-            <td>12-43-3434</td>
-          </tr>
+
           <tr>
-            <td>2</td>
-            <td>basaasa</td>
-            <td>@mdsaao</td>
-            <td>12-43-1212</td>
-            <td>@13-01-12121</td> 
-            <td>2</td>
-            <td>No</td>
-            <td>12-43-3434</td>
-            <tr>
-              <td>3</td>
-              <td>weuwegra</td>
-              <td>@qqw</td>
-              <td>111-43-1212</td>
-              <td>12-01-12121</td> 
-              <td>6</td>
-              <td>Yes</td>
-              <td>12-43-3434</td>
-            </tr>
+            <td scope=row>pname</td>
+            <td scope=row>pcat</td>
+            <td scope=row>perish</td>
+          </tr>
+
           </tbody>
-        </table>
-        
+
+    </table>
+</div>
+</div>
         
         <button  class="btnbtn " id="myBtn">Add</button>
         
@@ -490,7 +474,7 @@
           </div>
           <div class="modal-body">
        
-            <form action="/">
+            <form action="#">
                 <h1>Add Product</h1>
                 <div class="row">
 
@@ -504,13 +488,13 @@
                 <h4>Category<span>*</span></h4>
         
                 <div class="name">
-                    <input type="text" name="name" placeholder="Category" required />
+                    <input type="text" name="category" placeholder="Category" required />
                   </div>
                   </div>
                 <!-- <h4>Email</h4>
                 <input type="text" name="name" />
               -->
-                <h4>Estimate Delivery Date<span>*</span></h4>
+                <!-- <h4>Estimate Delivery Date<span>*</span></h4>
                 <div class="day-visited">
                   <input type="date" name="dayvisited" required/>
                   <i class="fas fa-calendar-alt"></i>
@@ -524,20 +508,20 @@
                 <h4>No of Paletts<span>*</span></h4>
                 <div class="name">
                     <input type="text" name="name" placeholder="No of Paletts" required />
-                  </div>
+                  </div> -->
                   <h4>Perishibale<span>*</span></h4>
                   <div class="question-answer">
-                    <label><input type="radio" value="Yes" name="Perish" /> Yes</label>
-                    <label><input type="radio" value="No" name="Perish" /> No</label>
+                    <label><input type="radio" value="1" name="perish" /> Yes</label>
+                    <label><input type="radio" value="0" name="perish" /> No</label>
                   </div>
-                  <h4>Expiry Date<span>*</span></h4>
+                  <!-- <h4>Expiry Date<span>*</span></h4>
                   <div class="day-visited">
                     <input type="date" name="dayvisited" required/>
                     <i class="fas fa-calendar-alt"></i>
                   </div>
-        
+         -->
                        <div class="btn-block">
-                  <button type="submit" href="/">Add</button>
+                  <button type="submit" name="submit" href="/">Add</button>
                 </div>
         
         
